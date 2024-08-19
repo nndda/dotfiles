@@ -19,10 +19,15 @@ export NODE_PATH=$NODE_PATH:`npm root -g`
 
 # Personal aliases
 
+alias zshrc='source ~/.zshrc'
+
 alias c='clear'
 
 alias warm='redshift -v -P -O 3415'
+
 alias godot=~/Developments/Godot/bin/godot
+alias gd=godot
+
 alias serve='python3 -m http.server'
 
-alias pyenv='source ./bin/activate'
+alias venv='source ./bin/activate'
