@@ -23,11 +23,14 @@ alias zshrc='source ~/.zshrc'
 
 alias c='clear'
 
+alias serve='python3 -m http.server'
+
 alias warm='redshift -v -P -O 3415'
+
+alias venv='source ./bin/activate'
+
+# Godot
 
 alias godot=~/Developments/Godot/bin/godot
 alias gd=godot
-
-alias serve='python3 -m http.server'
-
-alias venv='source ./bin/activate'
+alias gde='c && godot -e .'
