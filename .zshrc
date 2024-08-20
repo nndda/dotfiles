@@ -34,3 +34,17 @@ alias venv='source ./bin/activate'
 alias godot=~/Developments/Godot/bin/godot
 alias gd=godot
 alias gde='c && godot -e .'
+
+# Compressing stuff
+
+function targz() {
+	tar -cf - "$1" | 7zz a -tGZip -mx=9 -mfb=258 -mpass=15 -si "$1.tar.gz"
+}
+
+function zip_gud() {
+	7zz a -tzip -mx=9 -mm=LZMA "$1.zip" "$1"
+}
+
+function zip_meh() {
+	7zz a -tzip -mx=0 "$1.zip" "$1"
+}
