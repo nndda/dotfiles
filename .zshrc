@@ -31,7 +31,8 @@ alias venv='source ./bin/activate'
 
 # Godot
 
-alias godot=~/Developments/Godot/bin/godot
+path+=('~/Developments/Godot/bin/')
+
 alias gd=godot
 alias gde='c && godot -e .'
 
