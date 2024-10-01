@@ -16,8 +16,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 export NODE_PATH=$NODE_PATH:`npm root -g`
 
-
-# Personal aliases
+# General utilities
 
 alias zshrc='source ~/.zshrc'
 
@@ -28,6 +27,10 @@ alias serve='python3 -m http.server'
 alias warm='redshift -v -P -O 3415'
 
 alias venv='source ./bin/activate'
+
+mkvenv() {
+  python3 -m venv "$1"
+}
 
 # Godot
 
