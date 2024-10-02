@@ -57,3 +57,37 @@ zip_meh() {
 7zbak() {
 	7zz a -t7z -mx=9 "$(date +%Y%m%d)_$(date +%H%M%S)-$1.7z" "$1"
 }
+
+log_files_to_clean=(
+  ~/.bash_history
+  ~/huion.log
+  ~/.node_repl_history
+  ~/.python_history
+  ~/.zsh_history
+)
+
+cache_dir_to_clean=(
+  # ~/.cache/godot/
+  ~/.cache/google-chrome/
+  ~/.cache/krita/
+  ~/.cache/vlc/
+)
+
+cwean_uwu() {
+  sudo --v
+
+  apt autoremove
+  apt autopurge
+  apt autoclean
+
+  # Verify npm cache
+  npm cache verify
+
+  # Delete thumbnails
+  rm -r ~/.cache/thumbnails
+
+  # Empty log files
+  for logfile in $log_files_to_clean; do
+    truncate -s 0 "$logfile"
+  done
+}
