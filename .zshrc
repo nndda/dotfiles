@@ -42,14 +42,14 @@ alias gdex='gdh ~/dotfiles/godot/gdex.gd'
 
 # Compressing stuff
 
-function targz() {
+mktargz() {
 	tar -cf - "$1" | 7zz a -tGZip -mx=9 -mfb=258 -mpass=15 -si "$1.tar.gz"
 }
 
-function zip_gud() {
+zip_gud() {
 	7zz a -tzip -mx=9 -mm=LZMA "$1.zip" "$1"
 }
 
-function zip_meh() {
+zip_meh() {
 	7zz a -tzip -mx=0 "$1.zip" "$1"
 }
