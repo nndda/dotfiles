@@ -34,10 +34,11 @@ mkvenv() {
 
 # Godot
 
-path+=('~/Developments/Godot/bin/')
-
+alias godot=~/Developments/Godot/bin/godot
 alias gd=godot
+alias gdh='gd --no-header --display-driver headless --audio-driver Dummy -s'
 alias gde='c && godot -e .'
+alias gdex='gdh ~/dotfiles/godot/gdex.gd'
 
 # Compressing stuff
 
