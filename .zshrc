@@ -53,3 +53,7 @@ zip_gud() {
 zip_meh() {
 	7zz a -tzip -mx=0 "$1.zip" "$1"
 }
+
+7zbak() {
+	7zz a -t7z -mx=9 "$(date +%Y%m%d)_$(date +%H%M%S)-$1.7z" "$1"
+}
