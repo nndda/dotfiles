@@ -74,7 +74,7 @@ cache_dir_to_clean=(
 )
 
 cwean_uwu() {
-  sudo --v
+  sudo -v
 
   apt autoremove
   apt autopurge
